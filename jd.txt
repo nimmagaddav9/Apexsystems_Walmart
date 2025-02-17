@@ -1,0 +1,67 @@
+Redux Developer
+
+Client: Walmart
+
+Its 5 days a week in Reston, Virginia
+
+ 
+
+Needs:
+Redux
+react
+Node
+
+Typescript
+JavaScript
+
+ 
+
+Job Description:
+
+What you'll do:
+
+•   Create reusable JavaScript libraries that can be used for web applications.
+
+•   Upgrade legacy JavaScript and NodeJS based application to latest JS and NodeJS libraries including its dependencies.
+
+•   Design and implement new features for device orchestration and API integration at scale for retail checkout application.
+
+•   Decompose vague and poorly defined requirements into well-structured functional and nonfunctional requirements.
+
+•   Drive independently the requirement clarification, coding and testing of application.
+
+•   You will communicate effectively in writing and verbal to small and wider working groups.
+
+Highlighting context, problems, and impacts.
+
+ 
+
+What you'll bring
+
+- Have a mindset that Operational Excellence guaranteed at each layer, which include from design, development, testing and deployment.
+
+- Very deep understanding of typescript, JavaScript, Redux, React
+
+- 5+ years of large-scale project experience using typescript, JavaScript, Redux, React, Java, Jest, GIT, VS Code, messaging framework,
+
+- 5+ years designing application and practice SOLID principles in each development
+
+- 5+ years deploying TDD on a large-scale software
+
+- 5+ years developing contract first development
+
+- 5+ years monitoring and addressing production issues at scale.
+
+- 3+ years of developing dashboard and data analysis using Splunk, Grafana and BIG query
+
+- Ability to create automated unit and integration testing
+
+ 
+
+Preferred:
+
+- Migrated at least 2 to 3 large scale projects from older typescript to latest typescript and NodeJS
+
+framework
+
+- Experience with orchestrating Point of Sale devices such as payment terminals (pin pads) or barcode scanners, or other types of peripheral devices
