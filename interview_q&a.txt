@@ -1,8 +1,217 @@
-Interview email:
+Apex technical screening - Walmart
 
-You will be meeting with Wade.
-He will take you through some open ended questions and a code challenge.
-Code challenge with be a data structure use case, you have to do in Javascript/Typescript
-Please make sure you have a platform to code up in front of you.
+https://medium.com/@poonkuzhali_98336/walmart-global-tech-interview-experience-cdc3509408ea
 
+https://jaynil-gaglani.hashnode.dev/frontend-interview-experience-at-walmart#heading-how-did-i-get-to-know-about-this-opportunity
+
+Q1. Tell me about yourself?
+
+Vijay Nimmagadda here, Austin, Texas.
+
+=========================================================================================
+
+Q1. My previous work experience?
+I am a core UI Developer with 12+ years of experience building .com websites for different organizations using HTML5, CSS3,
+JavaScript, Angular 18, React.js, and Redux. 
+In the past 2 years, I worked on the React migration team, where I converted the .net pages to react on united.com. 
+Frontend is React, and used ATMOS (Own library) components used company wide.
+
+Worked on Security features for users where they can manage there account like Forgot password, Forgot MileagePlus number, 
+security questions, Sign-in features, Miles-Pooling, United Club pass,  Recent Activity, dashboard updates and 
+KTN(Known Traveler Number), Accessibility guidelines features on united.com.
+
+used middleware such as redux-saga to handle asynchronous tasks such as API calls, data fetching, and impure actions in a more organized and efficient way.
+
+The new initiative worked on Miles-Pooling( points you get after traveling), TSA Precheck, Account security and management features, and Under18.
+
+Previously worked with Accelerator team for Visa Inc. remediation of MBDA modules like Application Management, Account Management, Portfolio Management, Analytics, Recurring billing, Virtual Terminal, etc for bank users like Wells Fargo,  Bank of America, etc
+
+Capital Group worked on DAVIS Project. Davis stands for Data visualization where we build different highcharts using react and integrate into the AEM., the backend is Java. Previously I worked on Creative Workbench, a writing tool where articles are published on capital group websites.
+
+At Cerner Corporation worked on the medical examination forms.
+
+In Office Depot worked on black Friday reporting.
+
+Satinos Technologies created a tax portal and a schoomin website for the Vignan schools.
+
+--------------------------------------------------------------------------------
+
+q2. my projects and my tech stack were discussed. 
+
+United Airlines - React migration project
+Visa - Accelerator team - MBDA remediation of modules
+Capital Group - DAVIS and CWB.
+
+Tech Stack : FrontEnd is react.js, javascript, HTML5, css3, node.js, redux, redux-saga.
+
+
+q3. The interviewer put forth basic ES6 questions and code snippets for me to discuss on the output. 
+I wasn’t prepared for any tech discussion in this call. 
+However, the questions were very basic involving Closure, Hoisting and Object methods and I managed to answer those.
+
+
+Closure?
+
+    Closure
+    -------
+        - if any inner function holding the outer function data, then such scenario called as closure.
  
+ 
+<script>
+    function fun_one(){
+        var x = 10;
+        var y = 20;
+        return ()=>{
+            console.log(x);
+            console.log(y);
+        }
+    };
+    console.dir( fun_one() );  //0: Closure (fun_one) {x: 10, y: 20}
+  
+</script>
+-->
+
+
+-----------------------------------
+2. What is Hoisting in JS?
+	• accessing any variables before declaration.
+	• variable hoisting because of "var" keyword.
+	• we can overcome variable hoisting with "let" keyword.
+	• getting undefined instead of error called variable hoisting.
+
+    How it works?
+	console.log(data);    //var : undefined(variable hoisting)   
+	                      //let : ReferenceError: Cannot access 'data' before initialization
+	                      //const : SyntaxError: Missing initializer in const declaration
+const data;
+
+
+----------------------------------
+3. Object methods ?
+
+General Methods
+// Copies properties from a source object to a target object
+Object.assign(target, source)
+
+// Creates an object from an existing object
+Object.create(object)
+
+// Returns an array of the key/value pairs of an object
+Object.entries(object)
+
+// Creates an object from a list of keys/values
+Object.fromEntries()
+
+// Returns an array of the keys of an object
+Object.keys(object)
+
+// Returns an array of the property values of an object
+Object.values(object)
+
+// Groups object elements according to a function
+Object.groupBy(object, callback)
+
+
+-----------------------------------
+
+Javascript engine, 
+
+
+what is asynchronous/synchronous functions?
+
+
+In JavaScript, synchronous functions execute in sequence, one after the other. Each operation must complete before the next one begins.
+This can be simple to understand but can lead to performance issues if a function takes a long time to execute, 
+as it will block the execution of subsequent code.
+
+Asynchronous functions, on the other hand, allow the program to continue running while waiting for certain tasks to complete. 
+This is achieved using callbacks, promises, or async/await. 
+Asynchronous functions are non-blocking, meaning that they don't halt the execution of other code. 
+This is particularly useful for tasks like fetching data from an API or handling user input, where waiting for a response 
+could otherwise freeze the application. 
+
+------------------------------------------------------------------------------------------
+
+How can you Optimize Performance in React application?
+1. Memoization with useMemo and useCallback:  Use this hooks to memoize values and, reducing unnecessary recalculations.
+2. Optimizing Renders with React.Fragment: Use it to avoid unnecessary wrapper elements that could cause additional DOM nodes.
+3. Lazy loading with React.lazy: Use it to load components lazily, reducing the intial bundle size and improving intial loading performance.
+4. Code splitting: Employ code splitting to divide your application into smaller chunks that are loaded on demand, improving initial load times.
+5. Optimizing Images and Assets:  Compress and optimize images, use responsive images and leverage lazy loading for images to reduce network and rendering overhead.
+
+Error boundaries?
+
+Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, 
+and display a fallback UI instead of the component tree that crashed. 
+Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.
+
+
+What is debouncing?  
+Forcefully stopping all the previous execution and considering latest request.
+Debouncing is not predefined. Ex: Bank ATM money withdraw and deposit.
+
+
+Throttling?
+Throttling in JavaScript is a technique used to limit the execution rate of a function. 
+It ensures that a function is called at most once within a specified time interval. 
+This is useful for controlling the frequency of events that can fire rapidly, such as scrolling, resizing, or repeated user input, 
+preventing performance issues and improving responsiveness. 
+
+JavaScript
+
+function throttle(func, limit) {
+  let inThrottle;
+  return function() {
+    const args = arguments;
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => inThrottle = false, limit);
+    }
+  }
+}
+
+function myFunction() {
+  console.log("Function called");
+}
+
+const throttledFunction = throttle(myFunction, 1000); // Calls myFunction at most once per 1000ms
+
+window.addEventListener('scroll', throttledFunction);
+
+------------------------------------------
+
+
+The need for 
+useState, 
+useEffect, 
+useMemo, 
+useCallback, 
+useRef, and
+useReducer and their usage in a component was discussed with some sample code snippets. 
+
+useState: Manages state in functional components.
+useEffect: Manages side effects in functional components.
+useContext: Consumes context in functional components.
+useReducer: Manage state with a reducer function, For More complex state management.
+useRef: Accesses DOM elements or stores mutable values.
+useCallback: performance improvement usecase
+useMemo: performance improvement usecase.
+
+
+
+The appropriate usage of React native components was tested, also analysed the knowledge of package dependencies and their usage
+(Difference between react-native, react-native-web and react-dom).
+
+"React Native" is a framework for building mobile apps using JavaScript,
+
+while "React DOM" is the library used to render React components within a web browser, and
+ 
+"React Native Web" acts as a bridge, allowing you to use React Native components within a web application, 
+essentially letting you write code once and deploy it on both mobile and web platforms with some limitations;
+
+
+---------------------------------------------------
+
+
