@@ -117,32 +117,39 @@ var formidable = require('formidable');
 
 
 9. What is typescript and javascript?
+TypeScript: TypeScript is a superset of JavaScript,
+We have to give types for all the data sets we are consuming like API response or props we pass from 1 component to another,
+arguments passed to a function etc.
+TS is used to make the development bug free because we will know if a particular data is present in the data sets.
 
-TypeScript is a superset of JavaScript, meaning it includes all of JavaScript's features and adds more of its own. 
-The primary addition is static typing, which allows developers to define the types of variables, function parameters, 
-and return values.
+TypeScript code needs to be compiled into JavaScript before it can be executed by a browser or Node.js. 
+This compilation step allows the TypeScript compiler to catch type-related errors. 
+JavaScript code can be run directly without compilation.
 
 10. difference between TS and JS?
-TypeScript is known as an Object-oriented programming language whereas JavaScript is a prototype-based language.
-TypeScript has a feature known as Static typing but JavaScript does not support this feature.
-TypeScript supports Interfaces but JavaScript does not.
-Feature	TypeScript	JavaScript
-Typing	Provides static typing	Dynamically typed
- 
-Tooling	Comes with IDEs and code editors 	Limited built-in tooling
- 
-Syntax	Similar to JavaScript, with additional features 	Standard JavaScript syntax
- 
-Compatibility	Backward compatible with JavaScript 	Cannot run TypeScript in JavaScript files
- 
-Debugging	Stronger typing can help identify errors 	May require more debugging and testing
- 
-Learning curve 	Can take time to learn additional features 	Standard JavaScript syntax is familiar
+
+Feature                       TypeScript                            JavaScript
+Typing                        Statically typed                       Dynamically typed
+Compilation                  Requires compilation to JavaScript      No compilation needed
+Error Detection              Errors caught during development        Errors caught during runtime
+Code Maintainability         Improved due to static typing            Can be challenging in large projects
+Features      Includes features like interfaces, generics, and decorators   Basic language features
 
 
 
-11. TSX which tool is used to convert?
+11. Typescript which tool is used to convert?
 
-12. What is memory leak?
+To convert TypeScript code into JavaScript, the primary tool used is the TypeScript compiler (tsc),
+which is included with the TypeScript language itself;
+you simply run tsc on your TypeScript files to generate the corresponding JavaScript output. 
 
-13. what is promise.all() and promise.race()
+12. What is memory leak in JS?
+A memory leak occurs when a Node. js program fails to release memory that it no longer needs, 
+causing the program to consume more and more memory over time.
+
+This can lead to poor performance, slow response times, and ultimately, cause the application and other applications to crash.
+
+
+13. what is promise.all() and promise.race()?
+While Promise. all in JavaScript waits for all promises in the iterable to be resolved or rejected Promise. 
+race returns as soon as one of the promises in the iterable is settled. It's a race to see which promise settles first.
