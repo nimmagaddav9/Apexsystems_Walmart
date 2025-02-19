@@ -1,0 +1,148 @@
+1.  input = [ 'A', 'B','C', 1, 2, 3, '4', '5', 6, '@', '~', 'D' ]
+
+                 * Split the string, integer, and special characters into new arrays.
+                 * Make sure 4 and 5 which is a string should be in integer array list and convert it to integer.
+
+         Console Output:
+                 integer = [1,2,3,4,5,6]
+                 string = [ 'A', 'B', 'C', 'D' ]
+                 chars = [ '@', '~' ]
+
+
+Solution:
+const input = ["A", "B", "C", 1, 2, 3, "4", "5", 6, "@", "~", "D"];
+const integers = [];
+const strings = [];
+const chars = [];
+
+input.forEach((item) => {
+  if (typeof item === "number") {
+    integers.push(item);
+  } else if (!isNaN(item)) {
+    integers.push(parseInt(item, 10));
+  } else if (typeof item === "string" && item.match(/[a-zA-Z]/)) {
+    strings.push(item);
+  } else {
+    chars.push(item);
+  }
+});
+
+window.console.log("integers:", integers);
+window.console.log("strings:", strings);
+window.console.log("chars:", chars);
+
+-----------------------------------------------------------------------------------------
+
+
+Q2. Follow-up questions for integer array.
+            integer = [1,2,3,4,5,6]
+                 * Split it to 2 arrays with random elements and sum each array
+                   example:
+                          Output_1:
+                            array_1 = [ 1,4,6 ]
+                            array_2 = [ 2,3,5 ]
+                          Output_2: Sum each array
+                            array_1 = 11
+                            array_2 = 10
+
+Solution:
+
+
+function splitArray(arr) {
+  // shuffle methods randomly
+  const shf = arr.sort(() => Math.random() - 0.5);
+  // const mid = Math.floor(arr.length / 2);
+  const mid = Math.floor(Math.random() * arr.length);
+  //mid range
+  const arr1 = shf.slice(0, mid);
+  const arr2 = shf.slice(mid);
+  //reduce
+  const sum1 = arr1.reduce((acc, num) => acc + num, 0);
+  const sum2 = arr2.reduce((acc, num) => acc + num, 0);
+  //sum sd gqq
+  window.console.log("firstArray:", arr1, "sum1", sum1);
+  window.console.log("secondArray:", arr2, "sum2", sum2);
+}
+
+splitArray([1, 2, 3, 4, 5, 6]);
+
+-------------------------------------------------------
+3. Where are you from ? Vijay Nimmagadda here, Austin, Texas.
+
+
+4. tell me about yourself?
+I am a core UI Developer with 12+ years of experience building .com websites for different organizations using HTML5, CSS3,
+JavaScript, Angular 18, React.js, and Redux. 
+In the past 2 years, I worked on the React migration team, where I converted the .net pages to react on united.com. 
+Frontend is React, and used ATMOS (Own library) components used company wide.
+
+Worked on Security features for users where they can manage there account like Forgot password, Forgot MileagePlus number, 
+security questions, Sign-in features, Miles-Pooling, United Club pass,  Recent Activity, dashboard updates and 
+KTN(Known Traveler Number), Accessibility guidelines features on united.com.
+
+used middleware such as redux-saga to handle asynchronous tasks such as API calls, data fetching, and impure actions in a more organized and efficient way.
+
+The new initiative worked on Miles-Pooling( points you get after traveling), TSA Precheck, Account security and management features, and Under18.
+
+Previously worked with Accelerator team for Visa Inc. remediation of MBDA modules like Application Management, Account Management, Portfolio Management, Analytics, Recurring billing, Virtual Terminal, etc for bank users like Wells Fargo,  Bank of America, etc
+
+Capital Group worked on DAVIS Project. Davis stands for Data visualization where we build different highcharts using react and integrate into the AEM., the backend is Java. Previously I worked on Creative Workbench, a writing tool where articles are published on capital group websites.
+
+At Cerner Corporation worked on the medical examination forms.
+
+In Office Depot worked on black Friday reporting.
+
+Satinos Technologies created a tax portal and a schoomin website for the Vignan schools.
+
+
+5. have you used Node.js? yes 2018
+
+6. Which technologies have you worked on? Front end 90%, backend 10%
+
+7. Front End tools? REACT, Angular
+backend tools? JAVA
+
+8. how to upload image in node.js? 
+
+The Formidable Module
+There is a very good module for working with file uploads, called "Formidable".
+
+The Formidable module can be downloaded and installed using NPM:
+
+C:\Users\Your Name>npm install formidable
+After you have downloaded the Formidable module, you can include the module in any application:
+
+var formidable = require('formidable');
+
+
+
+9. What is typescript and javascript?
+
+TypeScript is a superset of JavaScript, meaning it includes all of JavaScript's features and adds more of its own. 
+The primary addition is static typing, which allows developers to define the types of variables, function parameters, 
+and return values.
+
+10. difference between TS and JS?
+TypeScript is known as an Object-oriented programming language whereas JavaScript is a prototype-based language.
+TypeScript has a feature known as Static typing but JavaScript does not support this feature.
+TypeScript supports Interfaces but JavaScript does not.
+Feature	TypeScript	JavaScript
+Typing	Provides static typing	Dynamically typed
+ 
+Tooling	Comes with IDEs and code editors 	Limited built-in tooling
+ 
+Syntax	Similar to JavaScript, with additional features 	Standard JavaScript syntax
+ 
+Compatibility	Backward compatible with JavaScript 	Cannot run TypeScript in JavaScript files
+ 
+Debugging	Stronger typing can help identify errors 	May require more debugging and testing
+ 
+Learning curve 	Can take time to learn additional features 	Standard JavaScript syntax is familiar
+
+
+
+11. TSX which tool is used to convert?
+
+12. What is memory leak?
+
+13. what is promise.all() and promise.race()
